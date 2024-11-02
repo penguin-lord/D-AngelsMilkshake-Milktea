@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="icon.jpg">
+    <title>Home</title>
+</head>    
+<style>
+        body {
+            font-family: Verdana, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/download.jpg");
+            color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header {
+            padding: 15px;
+            text-align: center;
+            background-image: linear-gradient(to left,dodgerblue,rgb(34, 174, 255), rgb(11, 110, 181)); /*Kayo po bahala sa color*/
+        }
+        @keyframes rainbow {
+        0% { color: red; }
+        16.666% { color: orange; }
+        33.333% { color: yellow; }
+        50% { color: green; }
+        66.666% { color: blue; }
+        83.333% { color: indigo; }
+        100% { color: violet; }
+    }
+    h1 {
+        font-size: 2em;
+        text-align: center;
+        animation: rainbow 6s linear infinite; /*Ito yung sa keyframes kaya iba't-ibang kulay ang letters*/
+    }
+    /**Start of Toggle Menu Code**/
+    nav {
+            position: relative;
+        }
+        #menu-toggle {
+            display: none;
+        }
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 15px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .menu li {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .menu li a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+
+        .menu li a:hover {
+            background-color: #070047;
+            color: white;
+        }
+             .menu {
+                display: none;
+                flex-direction: column;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: #5dccff;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 200px;
+            }
+            #menu-toggle:checked + .menu-icon .bar1 {
+                transform: rotate(-45deg) translate(-9px, 10px);
+            }
+            #menu-toggle:checked + .menu-icon .bar2 {
+                opacity: 0;
+            }
+            #menu-toggle:checked + .menu-icon .bar3 {
+                transform: rotate(45deg) translate(-10px, -10px);
+            }
+            #menu-toggle:checked ~ .menu {
+                display: flex;
+            }
+    /**End of Toggle Menu Code**/
+            footer {
+                background-color: #0011ff;
+                padding: 10px 10px;
+                text-align: center;
+                color: white;
+                bottom: 0;
+            }
+    /**Code For Content Area With Use of Table**/
+            article {
+                float: right;
+                padding: 30px auto;
+                width: 95%;
+                height: 100vh;
+                text-align: justify;
+            }  
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            } 
+
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 18px;
+                text-align: left;
+                color: white;
+            }   
+            table {
+                width: 80vw;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid white;
+                padding: 15px;
+                text-align: left;
+            }  
+    /**End of Code For Content Area With Use of Table**/
+</style>
+<body>
+    <header>
+        <h1>D'ANGELS MILKSHAKE & MILKTEA</h1>
+    </header>
+    <!--Start of applying CSS Sheet-->
+    <section>
+        <!--Start to embed the code of Toggle Menu-->
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </label>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+    </nav>
+<!--End of embed the code of Toggle Menu-->
+        <!--Start to input the content under the article-->
+<article>
+    <h4><font color="white" face="monospace" size="10PX">D'ANGELS OFFICIAL WEBSITE</font></h4><br>
+    <p>Welcome to the D'Angels Milkshake & Milktea</p>
+
+    <table>
+        <tr>
+            <th>THE DEPED VISION</th>
+            <th>THE DEPED MISSION</th>
+            <th>THE CORE VALUES</th>
+        </tr>
+        <tr>
+            <td>
+                We dream of Filipinos<br>
+                who passionately love their country<br>
+                and whose values and competencies<br>
+                enable them to realize their full potential<br>
+                and contribute meaningfully to building the nation.<br><br>
+
+                As a learner-centered public institution,<br>
+                the Department of Education<br>
+                continuously improves itself<br>
+                to better serve its stakeholders.<br>
+
+            </td>
+            <td>To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where: <BR><br>
+                <b>Students</b> learn in a child-friendly, gender-sensitive, safe, and motivating environment.<BR><br>
+                <b>Teachers</b> facilitate learning and constantly nurture every learner.<BR><br>
+                <b>Administrators</b> and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.<br><BR>
+                <b>Family,</b> community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.<BR><br>
+            </td>
+            <td>
+            <P>
+            <B> Maka-Diyos<br>
+                Maka-tao<br>
+                Makakalikasan<br>
+               Makabansa<br>
+            </B>
+            </P>
+            </td>
+        </tr>
+</table>    
+</article> 
+        <!--End for the content area-->
+</section>
+    <!--<footer class="copyright"> for footer the class="copyright" is not important -->
+<footer>
+<P>Designed & Developed By: <strong>D'ANGELS MILKSHAKE & MILKTEA TECHNICAL GROUP</strong><span>  &copy;All rights reserved 2024</P>
+</footer>    
+</body>
+  </html>f
